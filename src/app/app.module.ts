@@ -26,7 +26,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     MembresListeComponent,
-    ResponsiveToolbarComponent
+    :wqResponsiveToolbarComponent
   ],
   imports: [
     BrowserModule,
