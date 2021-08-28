@@ -9,7 +9,7 @@ const initialUIState: UIState = {
   pageTitle: null,
 };
 
-export function UIReducer( action: UIActions, state: UIState = initialUIState): UIState {
+export function UIReducer(  state: UIState = initialUIState, action: UIActions): UIState {
   switch (action.type) {
    case UIActionTypes.UI_UPDATE_PAGE_TITLE:
       return {
