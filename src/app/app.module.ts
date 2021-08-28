@@ -18,13 +18,19 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { reducersState} from './store';
+import { MembreTableComponent } from './components/membre-table/membre-table.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MembresListeComponent,
-    ResponsiveToolbarComponent
+    ResponsiveToolbarComponent,
+    MembreTableComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +48,10 @@ import { reducersState} from './store';
         logOnly: false
       }
     ),
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
     StoreModule.forRoot(reducersState, { } ),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([])
