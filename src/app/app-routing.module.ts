@@ -1,14 +1,21 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {MembresListeComponent} from './membres/membres-liste/membres-liste.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from './core/home/home.component';
+import {MembreComponent} from './core/membre/membre.component';
+import {MembreViewComponent} from './views/membre-view/membre-view.component';
 
 const ROUTES: Routes = [
-  { path: 'home',
+  {
+    path: 'home',
     component: HomeComponent,
   },
-  { path: 'membres',
-    component: MembresListeComponent
+  {
+    path: 'membre',
+    component: MembreComponent,
+    children: [{
+      path: 'liste',
+      component: MembreViewComponent,
+    }]
   }
 ];
 
@@ -16,4 +23,5 @@ const ROUTES: Routes = [
   imports: [RouterModule.forRoot(ROUTES, {useHash: true})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

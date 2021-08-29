@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -8,11 +8,7 @@ import {Router} from '@angular/router';
 })
 export class AppComponent {
   title = 'front';
-constructor(private readonly router: Router) {
-}
 
-  click(): void {
-    console.log('-------------------------');
-    this.router.navigate(['/home/membres']);
+  constructor(private readonly router: Router) {
   }
 }
