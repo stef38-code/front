@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --hmr",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-optimizer": "^0.1202.3",
     "@angular/animations": "~12.2.2",
     "@angular/cdk": "^12.2.2",
     "@angular/common": "~12.2.2",

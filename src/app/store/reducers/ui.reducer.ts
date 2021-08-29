@@ -1,4 +1,4 @@
-import { UIActions, UIActionTypes } from '../actions/ui.actions';
+import { UIActions, UIActionTypes } from '../../shared/actions/ui.actions';
 
 
 export class UIState {
